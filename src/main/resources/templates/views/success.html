@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎光临</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <div style="height: 30px">welcome to this page</div>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input style="width: 500px;height: 300px" type="image" src="..\images\abc.jpg"/><br/>
+            <input type="text" style="height: 50px;width: 150px" name="description" placeholder="请输入文件描述......."/>
+            <br>
+            <p>单文件上传</p>
+            <input type="file" name="oneFile"/><br/>
+            <p>多文件上传</p>
+            <input type="file" name="twoFile" multiple/><br/>
+            <input type="submit" value="上传文件"/>
+
+            <input type="reset" value="重置"/>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.1.10:3306/pay2_zyzs?useUniCode=true&allowMultiQueries=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&zeroDateTimeBehavior=convertToNulljdbc:mysql://192.168.1.10:3306/pay2_zyzs?useUniCode=true&allowMultiQueries=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&zeroDateTimeBehavior=convertToNull
+    username: part
+    password: 09a3vM#gPi41tGuY
+    driver-class-name: com.mysql.jdbc.Driver
+#    配置静态资源路径
+#    web:
+#      resources:
+#        static-locations: classpath:/templates/,classpath:/static/
+  mvc:
+    static-path-pattern: /**
+  #配置根路径
+  server:
+    context-path: /
+#  配置文件上传的最大大小
+  servlet:
+    multipart:
+#      文件上传的最大容量
+      max-file-size: 20MB
+#      总文件上传的最大容量
+      max-request-size: 1000MB
+#  main:
+#    lazy-initialization: true
+  reactor:
+    debug-agent:
+      enabled: false
+#整合mybatis
+mybatis:
+  type-aliases-package: com.atbdu.myspringboot.pojo
+  mapper-locations: classpath:mapper/*.xml
